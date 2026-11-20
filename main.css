@@ -2,231 +2,211 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: #000;
+    background: #000;
+    color: #fff;
 }
 
-
 .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 50px;
-    position: absolute;
-    width: 100%;
-    
+    padding: 25px 5%;
+    gap: 20px;
 }
 
 header .logo {
-    color: rgb(238, 231, 231);
-    font-size: 15px;
+    color: #fff;
+    font-size: 18px;
     font-weight: bold;
-    z-index: 999;
 }
 
-header .sign_btn
-{
-    
-    color: rgb(212, 6, 6);
-    border-radius: 20px;
-    z-index: 999;
-
+header .logo h1 {
+    font-size: inherit;
+    white-space: nowrap;
 }
 
-.sign-in{
+header .sign_btn {
+    flex-shrink: 0;
+}
+
+.sign-in {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: #e50914;
-    padding: 10px 20px;
     color: white;
     text-decoration: none;
+    padding: 8px 16px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 15px;
+    white-space: nowrap;
 }
-
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100svh;
+    width: 100%;
     background-image: url('p1.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 20px 50px;
 }
 
 .overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.60);
 }
 
 .content {
     position: relative;
+    z-index: 1;
     color: white;
     text-align: center;
-    top: 35%;
-    max-width: 700px;
-    margin: auto;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .title {
-    font-size: 45px;
+    font-size: clamp(32px, 5vw, 60px);
     font-weight: bold;
+    line-height: 1.15;
     margin-bottom: 20px;
-    line-height: 1.3;
 }
 
 .subtitle {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .description {
     font-size: 18px;
-    margin-bottom: 30px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .email {
     display: flex;
     justify-content: center;
-    gap: 0;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto 0;
 }
 
 .email input {
-    width: 350px;
-    padding: 15px;
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
     font-size: 16px;
-    border: none;
+    border: 1px solid #777;
+    border-radius: 4px;
     outline: none;
 }
 
+.email button,
 .start {
     background: #e50914;
     color: white;
     border: none;
+    border-radius: 4px;
     padding: 15px 25px;
     font-size: 18px;
-    
-}
-.tv-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #000;
-    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.tv-text h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.email button:hover,
+.start:hover {
+    background: #f6121d;
 }
 
-.tv-text p {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.tv-image img {
-    max-width: 500px;
-    width: 100%;
-}
-.download-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px;
-    gap: 60px;
-     background: black;
-    color: white;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-.image-box img {
-    width: 320px;
-    max-width: 100%;
-}
-
-.text-box {
-    max-width: 600px;
-}
-
-.text-box h1 {
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.text-box p {
-    font-size: 20px;
-}
-
-.watch-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-    background: #000;
-    font-family: sans-serif;
-    color: #fff;
-}
-
-.text-content {
-    max-width: 500px;
-}
-
-.text-content h1 {
-    font-size: 55px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.text-content p {
-    font-size: 24px;
-    line-height: 1.5;
-    color: #ccc;
-}
-
-.image-content img {
-    width: 550px;
-}
+.tv-section,
+.download-container,
+.watch-section,
 .children-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    gap: 40px;
+    padding: 70px 8%;
     background: #000;
-    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 }
 
-.children-image img {
-    width: 550px;
-}
-
+.tv-text,
+.text-box,
+.text-content,
 .children-text {
+    flex: 1;
     max-width: 600px;
 }
 
+.tv-text h1,
+.text-box h1,
+.text-content h1,
 .children-text h1 {
-    font-size: 50px;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
+.tv-text p,
+.text-box p,
+.text-content p,
 .children-text p {
-    font-size: 22px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.5;
     color: #ccc;
+}
+
+.tv-image,
+.image-box,
+.image-content,
+.children-image {
+    flex: 1;
+    text-align: center;
+}
+
+.tv-image img,
+.image-content img,
+.children-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
 .faq-section {
     text-align: center;
-    padding: 80px 20px;
+    padding: 70px 20px;
     background: #000;
     color: #fff;
-    font-family: sans-serif;
 }
 
 .faq-section h1 {
@@ -236,7 +216,8 @@ header .sign_btn
 }
 
 .faq-container {
-    max-width: 700px;
+    width: 100%;
+    max-width: 800px;
     margin: auto;
     text-align: left;
 }
@@ -246,14 +227,15 @@ details {
     margin-bottom: 10px;
     padding: 20px;
     font-size: 22px;
-    position: relative;
 }
 
 summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     list-style: none;
+    cursor: pointer;
 }
 
 summary::-webkit-details-marker {
@@ -262,6 +244,7 @@ summary::-webkit-details-marker {
 
 details span {
     font-size: 30px;
+    flex-shrink: 0;
 }
 
 details p {
@@ -272,40 +255,16 @@ details p {
 }
 
 .ready-text {
-    margin: 40px 0 20px;
+    margin: 40px auto 20px;
+    max-width: 800px;
     font-size: 20px;
-}
-
-.email {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.email input {
-    width: 350px;
-    padding: 15px;
-    font-size: 18px;
-}
-
-.email button {
-    padding: 15px 25px;
-    background: #e50914;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.email button:hover {
-    background: #f6121d;
+    line-height: 1.5;
 }
 
 .footer {
     color: #999;
-    padding: 60px 12%;
+    padding: 60px 8%;
     background: #000;
-    font-family: Arial, sans-serif;
 }
 
 .footer .phone {
@@ -321,7 +280,6 @@ details p {
 
 .footer ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer ul li {
@@ -338,45 +296,28 @@ details p {
     text-decoration: underline;
 }
 
-
-@media (max-width: 768px) {
-    .download-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px;
-        gap: 30px;
-    }
-
-    .text-box h1 {
-        font-size: 32px;
-    }
-
-    .image-box img {
-        width: 240px;
-    }
-}
-
-
-
+/* Sign-in Page */
 .sign-in_body {
     font-family: Arial, sans-serif;
     background-image: url('p1.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100svh;
+    padding: 20px;
     margin: 0;
 }
 
-
 .signin-container {
     background-color: white;
-    padding: 100px;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 350px; 
+    max-width: 380px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .signin-container h2 {
@@ -398,64 +339,77 @@ details p {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: var(--color-text-dark);
+    color: #333;
 }
 
 .input-group input[type="text"],
 .input-group input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; 
 }
-
 
 .submit-button {
     background-color: green;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #45a049; 
+    background-color: #45a049;
 }
-@media screen and (max-width: 600px) {
-    .header {
-        padding: 20px 15px;
+
+/* Tablets & Medium Screens */
+@media (max-width: 900px) {
+    .tv-section,
+    .watch-section,
+    .children-section,
+    .download-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+        gap: 25px;
     }
 
-    .header .logo h1 {
-        font-size: 16px;
-        white-space: nowrap;
+    .tv-text,
+    .text-box,
+    .text-content,
+    .children-text {
+        max-width: 100%;
+    }
+
+    .footer .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    .header {
+        padding: 18px 16px;
+    }
+
+    header .logo h1 {
+        font-size: 17px;
     }
 
     .sign-in {
         font-size: 14px;
         padding: 8px 12px;
-        white-space: nowrap;
     }
 
     .hero {
-        min-height: 100vh;
-        padding: 130px 20px 40px;
-        background-position: center;
-    }
-
-    .content {
-        width: 100%;
-        max-width: 100%;
+        padding: 100px 18px 40px;
     }
 
     .title {
         font-size: 32px;
-        line-height: 1.2;
     }
 
     .subtitle {
@@ -467,23 +421,74 @@ details p {
     }
 
     .email {
-        display: flex;
-        width: 100%;
-        gap: 8px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .email input {
-        flex: 1;
-        width: 0;
-        min-width: 0;
-        padding: 12px;
-        font-size: 14px;
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
     }
 
     .email button,
     .start {
-        padding: 12px;
-        font-size: 14px;
-        white-space: nowrap;
+        width: 100%;
+        padding: 13px 16px;
+        font-size: 16px;
+    }
+
+    .tv-section,
+    .download-container,
+    .watch-section,
+    .children-section {
+        padding: 45px 20px;
+    }
+
+    .image-box img {
+        max-width: 230px;
+    }
+
+    .faq-section {
+        padding: 45px 16px;
+    }
+
+    .faq-section h1 {
+        font-size: 32px;
+    }
+
+    details {
+        padding: 16px;
+        font-size: 17px;
+    }
+
+    details span {
+        font-size: 24px;
+    }
+
+    details p {
+        font-size: 16px;
+    }
+
+    .ready-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer .links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .footer ul li a {
+        font-size: 13px;
+    }
+
+    .signin-container {
+        padding: 28px 20px;
     }
 }
