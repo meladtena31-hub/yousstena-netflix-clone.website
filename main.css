@@ -426,3 +426,64 @@ details p {
 .submit-button:hover {
     background-color: #45a049; 
 }
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 20px 15px;
+    }
+
+    .header .logo h1 {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .sign-in {
+        font-size: 14px;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 130px 20px 40px;
+        background-position: center;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .email {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .email input {
+        flex: 1;
+        width: 0;
+        min-width: 0;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .email button,
+    .start {
+        padding: 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
